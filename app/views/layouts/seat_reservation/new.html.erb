@@ -1,0 +1,9 @@
+<%= form_for @seat_reservation do |f| %>
+  <%= f.label :seat_number %>
+  <%= f.text_field :seat_number %>
+
+  <%= f.label :show_id %>
+  <%= f.number_field :show_id %>
+
+  <%= f.submit "Create Reservation" %>
+<% end %>
