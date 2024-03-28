@@ -1,7 +1,11 @@
 class SeatReservationsController < ApplicationController
-  def new
-    @seat_reservation = SeatReservation.new
-  end
+
+def new
+  @show = Show.find(params[:show_id]) # Assumindo que você tem um show_id
+  @seat_reservation = @show.seat_reservations.build
+  @unavailable_seats = @show.seat_reservations.pluck(:seat_position)
+end
+
 
   def create
     @seat_reservation = SeatReservation.new(seat_reservation_params)
