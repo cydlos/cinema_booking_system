@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'cinemas#index'
+  root to: 'cinemas#index'
 
   resources :cinemas do
     resources :shows, only: [:index, :show]
