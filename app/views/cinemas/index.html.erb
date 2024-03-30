@@ -1,0 +1,7 @@
+<h1>Listagem de Cinemas</h1>
+
+<ul>
+  <% @cinemas.each do |cinema| %>
+    <li><%= cinema.name %> - <%= cinema.location %></li>
+  <% end %>
+</ul>
