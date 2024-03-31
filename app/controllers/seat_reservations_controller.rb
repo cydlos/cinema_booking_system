@@ -1,5 +1,7 @@
 class SeatReservationsController < ApplicationController
 
+before_action :authenticate_user!, only: [:new, :create, :index]
+
 def new
   @show = Show.find(params[:show_id]) # Assumindo que você tem um show_id
   @seat_reservation = @show.seat_reservations.build
@@ -24,6 +26,5 @@ end
 
   def seat_reservation_params
     params.require(:seat_reservation).permit(:seat_number, :show_id)
-    # autenticação do usuário a ser incluída aqui
   end
 end
