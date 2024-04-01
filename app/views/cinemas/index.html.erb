@@ -2,6 +2,13 @@
 
 <ul>
   <% @cinemas.each do |cinema| %>
-    <li><%= cinema.name %> - <%= cinema.location %></li>
+    <li>
+      <%= cinema.name %> - <%= cinema.location %>
+      <ul>
+        <% cinema.shows.each do |show| %>
+          <li><%= show.movie_title %> - <%= show.start_time.strftime("%d/%m/%Y %H:%M") %></li>
+        <% end %>
+      </ul>
+    </li>
   <% end %>
 </ul>
