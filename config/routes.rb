@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :shows do
     resources :seat_reservations, only: [:new, :create, :index]
+    resources :start_time, only: [:index]
   end
 
 end
