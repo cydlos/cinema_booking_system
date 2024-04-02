@@ -1,16 +1,15 @@
-<%= form_for @seat_reservation do |f| %>
-  <% ('A'..'H').each do |row| %>
-    <div class="seat-row">
-      <% (1..10).each do |number| %>
-        <% seat_position = "#{row}#{number}" %>
-        <% if @unavailable_seats.include?(seat_position) %>
-          <span class="seat unavailable"> <%= seat_position %> </span>
-        <% else %>
-          <%= f.radio_button :seat_position, seat_position, id: "seat_#{seat_position}" %>
-          <%= f.label "seat_#{seat_position}", seat_position, class: "seat" %>
-        <% end %>
-      <% end %>
-    </div>
-  <% end %>
-  <%= f.submit "Reserve Seat" %>
+<h1>Reservar Assento para <%= @show.movie_title %></h1>
+
+<%= form_with model: [@show, @seat_reservation], local: true do |form| %>
+  <%# Campos do formulário, como seleção de assento, etc. %>
+  <div>
+    <%= form.label :seat_number %>
+    <%= form.text_field :seat_number %>
+  </div>
+
+  <div>
+    <%= form.submit "Reservar Assento" %>
+  </div>
 <% end %>
+
+<%= link_to 'Voltar', cinemas_path %>

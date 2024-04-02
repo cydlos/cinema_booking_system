@@ -6,7 +6,7 @@
       <%= cinema.name %> - <%= cinema.location %>
       <ul>
         <% cinema.shows.each do |show| %>
-          <li><%= show.movie_title %> </li>
+          <li><%= link_to show.movie_title, new_show_seat_reservation_path(show) %></li>
         <% end %>
       </ul>
     </li>
