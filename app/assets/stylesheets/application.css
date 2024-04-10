@@ -1,29 +1,7 @@
-body, h1, p {
-  margin: 0;
-  padding: 0;
-}
+@import "bootstrap";
+@import "components/cinema.css";
 
-body {
-  background-color: #f2f2f2;
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
+/*
+ *= require_tree .
+ *= require_self
+ */
