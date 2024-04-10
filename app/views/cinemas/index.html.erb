@@ -1,8 +1,9 @@
 <h1>Listagem de Cinemas</h1>
+<div class="container">
   <ul>
     <% @cinemas.each do |cinema| %>
       <li>
-        <%= cinema.name %> - <%= cinema.location %>
+        <%= cinema.name %> ::: <%= cinema.location %>
         <ul>
           <% cinema.shows.each do |show| %>
             <li><%= link_to show.movie_title, new_show_seat_reservation_path(show) %></li>
@@ -10,4 +11,5 @@
         </ul>
       </li>
     <% end %>
-</ul>
+  </ul>
+</div>
