@@ -6,4 +6,10 @@ class SeatReservation < ApplicationRecord
   validates :seat_position, uniqueness: { scope: :show_id, message: "Assento indisponível" }
   validate :seat_must_be_available, on: :create
 
-end
+    private
+    
+    def seat_must_be_available
+      existing_reservation = SeatReservation.where(show_id: show_id, seat_position: seat_number).exists?
+      errors.add(:seat_position, "is already taken") if existing_reservation
+    end
+  end
