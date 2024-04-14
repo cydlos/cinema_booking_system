@@ -1,5 +1,5 @@
-user1 = User.create!(email: '1@hotmail.com', password: 'passwor2d', password_confirmation: 'passwor2d')
-user2 = User.create!(email: '2@gmail.com', password: 'password23', password_confirmation: 'password23')
+user1 = User.create!(email: 'h1@hotmail.com', password: 'passwor2d', password_confirmation: 'passwor2d')
+user2 = User.create!(email: 'e2@gmail.com', password: 'password23', password_confirmation: 'password23')
 
 cinema1 = Cinema.create!(name: 'Kinoplex 2', location: 'Copacabana')
 cinema2 = Cinema.create!(name: 'Kniplex 3', location: 'Madureira')
