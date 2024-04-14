@@ -7,5 +7,5 @@ cinema2 = Cinema.create!(name: 'Kniplex 3', location: 'Madureira')
 show1 = Show.create!(movie_title: 'Titanic', start_time: DateTime.now + 3.days, cinema: cinema1)
 show2 = Show.create!(movie_title: 'Saw', start_time: DateTime.now + 10.days, cinema: cinema2)
 
-# seat_position1 = SeatReservation.create!(row: 1, number: 1, cinema: cinema1)
-# seat_position2 = SeatReservation.create!(row: 1, number: 2, cinema: cinema1)
+seat_position1 = SeatReservation.create!(seat_position: 'D8', cinema: cinema1, show: show1, user: user1)
+seat_position2 = SeatReservation.create!(seat_position: 'A2', cinema: cinema1, show: show1, user: user2)

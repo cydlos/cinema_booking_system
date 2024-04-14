@@ -19,14 +19,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_28_093027) do
   end
 
   create_table "seat_reservations", force: :cascade do |t|
-    t.string "seat_number"
+    t.string "seat_position"
     t.integer "show_id", null: false
     t.integer "user_id", null: false
+    t.integer "cinema_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "seat_position"
     t.index ["show_id"], name: "index_seat_reservations_on_show_id"
     t.index ["user_id"], name: "index_seat_reservations_on_user_id"
+    t.index ["cinema_id"], name: "index_seat_reservations_on_cinema_id"
   end
 
   create_table "shows", force: :cascade do |t|
