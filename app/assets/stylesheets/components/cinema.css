@@ -14,6 +14,7 @@ div .container {
   align-items: center;
   height: 100vh;
   background-color: blueviolet;
+  color: blue;
 }
 
 h1 {
