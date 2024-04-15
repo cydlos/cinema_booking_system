@@ -13,8 +13,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: blueviolet !important;
-  color: blue !important;
+  background-color: blueviolet;
+  color: blue;
 }
 
 h1 {
