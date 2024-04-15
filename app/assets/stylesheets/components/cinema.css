@@ -8,13 +8,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
-div .container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: blueviolet;
-  color: blue;
+  background-color: blueviolet !important;
+  color: blue !important;
 }
 
 h1 {
